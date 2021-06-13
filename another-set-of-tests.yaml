@@ -1,0 +1,9 @@
+global:
+  name: Design testing of local app
+  url: http://localhost:3000
+  debug: False
+
+tests:
+  - name: Element doesnt exist
+    test_cases:
+     - selector: '#random'

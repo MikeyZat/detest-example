@@ -1,0 +1,180 @@
+global:
+  name: Design testing of local app
+  url: http://localhost:3000
+  debug: False
+
+tests:
+  - name: Home page on desktop
+    type: styles
+    debug: False
+    width: 1600
+    test_cases:
+      - selector: ".App"
+        text-align: center
+        display: block
+
+      - selector: "#root > div > div > img"
+        color: "rgb(255,255,255)"
+
+      - xpath: '//*[@id="root"]/div/div'
+        background-color: "#282c34"
+        width: "1600px"
+        color: white
+
+      - selector: header
+        width: 1600
+        height: 64
+        background-color: "#3f51b5"
+
+  - name: Home page on mobile
+    type: styles
+    width: 375
+    run: False # Change to TRUE when mobile version ready
+    test_cases:
+      - selector: ".App"
+
+      - selector: header
+        width: 375
+        height: 56
+
+  - name: Pricing tab on desktop
+    type: styles
+    url: "/pricing"
+    width: 1600
+    test_cases:
+      - selector: h1
+        color: "rgb(0,0,0,0.87)"
+        font-size: 60
+        line-height: 1.2
+
+      - selector: "#free"
+        height: 332
+      - selector: "#free .MuiCardHeader-root"
+        padding: 16
+        background-color: "#eee"
+      - selector: "#free h2"
+        font-size: 48
+        font-family: "Roboto, Helvetica, Arial, sans-serif"
+      - selector: "#free button"
+        color: "#3f51b5"
+
+      - selector: "#pro"
+        height: 356
+      - selector: "#pro .MuiCardHeader-root"
+        padding: 16
+        background-color: "#eee"
+      - selector: "#pro h2"
+        font-size: 48
+        font-family: "Roboto, Helvetica, Arial, sans-serif"
+      - selector: "#pro button"
+        color: "#fff"
+        background-color: "#3f51b5"
+
+      - selector: "#enterprise"
+        height: 332
+      - selector: "#enterprise .MuiCardHeader-root"
+        padding: 16
+        background-color: "#eee"
+      - selector: "#enterprise h2"
+        font-size: 48
+        font-family: "Roboto, Helvetica, Arial, sans-serif"
+      - selector: "#enterprise button"
+        color: "#3f51b5"
+
+      - selector: header
+        width: 1600
+        height: 64
+        background-color: "#3f51b5"
+
+  - name: Pricing tab on mobile
+    type: styles
+    url: "/pricing"
+    width: 375
+    test_cases:
+      - selector: h1
+        color: "rgb(0,0,0,0.87)"
+        font-size: 60
+        line-height: 1.2
+
+      - selector: "#free"
+        height: 332
+        width: 343
+      - selector: "#free .MuiCardHeader-root"
+        padding: 16
+        background-color: "#eee"
+      - selector: "#free h2"
+        font-size: 48
+        font-family: "Roboto, Helvetica, Arial, sans-serif"
+      - selector: "#free button"
+        color: "#3f51b5"
+
+      - selector: "#pro"
+        height: 356
+        width: 343
+      - selector: "#pro .MuiCardHeader-root"
+        padding: 16
+        background-color: "#eee"
+      - selector: "#pro h2"
+        font-size: 48
+        font-family: "Roboto, Helvetica, Arial, sans-serif"
+      - selector: "#pro button"
+        color: "#fff"
+        background-color: "#3f51b5"
+
+      - selector: "#enterprise"
+        height: 332
+        width: 343
+      - selector: "#enterprise .MuiCardHeader-root"
+        padding: 16
+        background-color: "#eee"
+      - selector: "#enterprise h2"
+        font-size: 48
+        font-family: "Roboto, Helvetica, Arial, sans-serif"
+      - selector: "#enterprise button"
+        color: "#3f51b5"
+
+      - selector: "#copyright"
+
+      - selector: header
+        width: 375
+        height: 64
+        background-color: "#3f51b5"
+
+  - name: Sign in tab on desktop
+    type: styles
+    url: "/signIn"
+    width: 1600
+    test_cases:
+      - selector: main
+        max-width: 444
+        padding-left: 24
+        padding-right: 24
+
+      - selector: header
+        width: 1600
+        height: 64
+        background-color: "#3f51b5"
+
+  - name: Sign in tab on mobile
+    type: styles
+    url: "/signIn"
+    width: 375
+    test_cases:
+      - selector: main
+        padding-left: 16
+        padding-right: 16
+
+      - selector: .MuiInputBase-formControl
+        width: 343
+
+      - selector: button
+        width: 343
+        background-color: "#3f51b5"
+        margin-top: 24
+
+      - selector: "#copyright"
+
+      - selector: header
+        width: 375
+        height: 64
+        background-color: "#3f51b5"

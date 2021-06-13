@@ -20,7 +20,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "detest": "detest"
+    "detest": "detest",
+    "another-detest": "detest -c another-set-of-tests.yaml"
   },
   "eslintConfig": {
     "extends": [

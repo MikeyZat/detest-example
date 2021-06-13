@@ -20,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run detest
-        run: npm run detest
+      - name: Run design tests
+        run: npm run prod-test

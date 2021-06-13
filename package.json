@@ -21,6 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "detest": "detest",
+    "prod-test": "concurrently -s=first -k 'npm start' 'wait-on http://localhost:3000/ && npm run detest'",
     "another-detest": "detest -c another-set-of-tests.yaml"
   },
   "eslintConfig": {
@@ -42,6 +43,8 @@
     ]
   },
   "devDependencies": {
-    "@mikeyzat12/detest": "^0.0.1"
+    "@mikeyzat12/detest": "^0.0.1",
+    "concurrently": "^6.2.0",
+    "wait-on": "^5.3.0"
   }
 }

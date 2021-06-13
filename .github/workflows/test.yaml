@@ -20,8 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Start local app
-        run: npm start
-
-      - name: Run detest
+      - name: Run design tests
         run: npm run prod-test

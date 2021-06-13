@@ -24,4 +24,4 @@ jobs:
         run: npm start
 
       - name: Run detest
-        run: npm run detest
+        run: npm run prod-test

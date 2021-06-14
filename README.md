@@ -56,7 +56,37 @@ pipeline.
 Here I use the default `detest.yaml` configuration file but you can use whatever file/options you want.
 
 ### Creating the CI pipeline and including the design tests
+In my example I've used [GitHub Actions](https://github.com/features/actions) but you can use whatever CI tool you want.
 
+Having the `prod-test` command in your `package.json` file, simply add it as a step in your pipeline:
+```yaml
+name: Test
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  test_app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "15"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run design tests
+        run: npm run prod-test
+
+```
+And that's it! Check the [Actions](https://github.com/MikeyZat/detest-example/actions) tab to see it working.
 
 ## de-test library
 

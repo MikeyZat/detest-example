@@ -87,7 +87,7 @@ const tiers = [
       "Email support",
     ],
     buttonText: "Sign up for free",
-    buttonVariant: "contained",
+    buttonVariant: "outlined",
   },
   {
     id: "pro",

@@ -190,45 +190,38 @@ tests:
     test_cases:
       - selector: header
         position:
-          x: 100
-          y: 200
+          x: 0
+          y: 20
         contains:
-          - selector: button
-            count: 2
-          - selector: test
+          - selector: a
             count: 3
-          - selector: .xd
+          - selector: .MuiTypography-h6
 
   - name: Pricing page layout desktop
     type: layout
     url: /pricing
     width: 1600
     test_cases:
-      - costam: xd
-
-  - name: Sign in page layout desktop
-    type: layout
-    url: /signIn
-    width: 1600
-    test_cases:
-      - costam: xd
-
-  - name: Welcome page layout mobile
-    type: layout
-    width: 375
-    test_cases:
-      - costam: xd
-
-  - name: Pricing page layout mobile
-    type: layout
-    url: /pricing
-    width: 375
-    test_cases:
-      - costam: xd
+      - selector: main
+        contains:
+          - selector: .MuiCard-root
+            count: 3
+      - selector: footer
+        position:
+          x: 300
+          y: 1200
+        contains:
+          - selector: .MuiGrid-item
+            count: 4
+          - selector: h6
+            count: 4
 
   - name: Sign in page layout mobile
     type: layout
     url: /signIn
     width: 375
     test_cases:
-      - costam: xd
+      - selector: main
+        contains:
+          - selector: input.MuiInputBase-input
+            count: 2

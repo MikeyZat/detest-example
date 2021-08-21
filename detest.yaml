@@ -8,7 +8,6 @@ tests:
     type: styles
     debug: False
     width: 1600
-    run: False
     test_cases:
       - selector: ".App"
         text-align: center
@@ -42,7 +41,6 @@ tests:
     type: styles
     url: "/pricing"
     width: 1600
-    run: False
     test_cases:
       - selector: h1
         color: "rgb(0,0,0,0.87)"
@@ -92,7 +90,6 @@ tests:
     type: styles
     url: "/pricing"
     width: 375
-    run: False
     test_cases:
       - selector: h1
         color: "rgb(0,0,0,0.87)"
@@ -146,7 +143,6 @@ tests:
   - name: Sign in tab on desktop
     type: styles
     url: "/signIn"
-    run: False
     width: 1600
     test_cases:
       - selector: main
@@ -162,7 +158,7 @@ tests:
   - name: Sign in tab on mobile
     type: styles
     url: "/signIn"
-    run: False
+    run: True
     width: 375
     test_cases:
       - selector: main
@@ -208,8 +204,8 @@ tests:
             count: 3
       - selector: footer
         position:
-          x: 300
-          y: 1200
+          x: 500
+          y: 900
         contains:
           - selector: .MuiGrid-item
             count: 4

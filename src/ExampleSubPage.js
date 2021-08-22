@@ -152,7 +152,11 @@ export default function ExampleSubPage() {
 
   return (
     <>
-      <Container maxWidth="sm" component="main" className={classes.heroContent}>
+      <Container
+        maxWidth="sm"
+        component="header"
+        className={classes.heroContent}
+      >
         <Typography
           component="h1"
           variant="h2"

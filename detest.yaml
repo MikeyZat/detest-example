@@ -233,4 +233,4 @@ tests:
     debug: False
     type: contrast
     url: /pricing
-    run: True
+    run: False

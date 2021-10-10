@@ -51,37 +51,41 @@ tests:
 
       - selector: "#free"
         height: 332
-      - selector: "#free .MuiCardHeader-root"
-        padding: 16
-        background-color: "#eee"
-      - selector: "#free h2"
-        font-size: 48
-        font-family: "Roboto, Helvetica, Arial, sans-serif"
-      - selector: "#free button"
-        color: "#3f51b5"
+        inside:
+          - selector: ".MuiCardHeader-root"
+            isDirectChild: True
+            padding: 16
+            background-color: "#eee"
+          - selector: "h2"
+            font-size: 48
+            font-family: "Roboto, Helvetica, Arial, sans-serif"
+          - selector: "button"
+            color: "#3f51b5"
 
       - selector: "#pro"
         height: 356
-      - selector: "#pro .MuiCardHeader-root"
-        padding: 16
-        background-color: "#eee"
-      - selector: "#pro h2"
-        font-size: 48
-        font-family: "Roboto, Helvetica, Arial, sans-serif"
-      - selector: "#pro button"
-        color: "#fff"
-        background-color: "#3f51b5"
+        inside:
+          - selector: ".MuiCardHeader-root"
+            padding: 16
+            background-color: "#eee"
+          - selector: "h2"
+            font-size: 48
+            font-family: "Roboto, Helvetica, Arial, sans-serif"
+          - selector: "button"
+            color: "#fff"
+            background-color: "#3f51b5"
 
       - selector: "#enterprise"
         height: 332
-      - selector: "#enterprise .MuiCardHeader-root"
-        padding: 16
-        background-color: "#eee"
-      - selector: "#enterprise h2"
-        font-size: 48
-        font-family: "Roboto, Helvetica, Arial, sans-serif"
-      - selector: "#enterprise button"
-        color: "#3f51b5"
+        inside:
+          - selector: ".MuiCardHeader-root"
+            padding: 16
+            background-color: "#eee"
+          - selector: "h2"
+            font-size: 48
+            font-family: "Roboto, Helvetica, Arial, sans-serif"
+          - selector: "button"
+            color: "#3f51b5"
 
       - selector: header
         width: 1600
@@ -197,6 +201,11 @@ tests:
           - selector: a
             count: 3
           - selector: .MuiTypography-h6
+        inside:
+          - selector: h6
+            position:
+              x: 50
+              y: 30
 
   - name: Pricing page layout desktop
     type: layout

@@ -2,6 +2,7 @@ global:
   name: Design testing of local app
   url: http://localhost:3000
   debug: False
+  UI_framework: material
 
 tests:
   - name: Home page on desktop
@@ -22,7 +23,7 @@ tests:
         width: "1600px"
         color: white
 
-      - selector: header
+      - selector: bar
         width: 1600
         height: 64
         background-color: "#3f51b5"
@@ -34,7 +35,7 @@ tests:
     test_cases:
       - selector: ".App"
 
-      - selector: header
+      - selector: bar
         width: 375
         height: 56
 
@@ -52,7 +53,7 @@ tests:
       - selector: "#free"
         height: 332
         inside:
-          - selector: ".MuiCardHeader-root"
+          - selector: "cardHeader"
             isDirectChild: True
             padding: 16
             background-color: "#eee"
@@ -65,7 +66,7 @@ tests:
       - selector: "#pro"
         height: 356
         inside:
-          - selector: ".MuiCardHeader-root"
+          - selector: "cardHeader"
             padding: 16
             background-color: "#eee"
           - selector: "h2"
@@ -78,7 +79,7 @@ tests:
       - selector: "#enterprise"
         height: 332
         inside:
-          - selector: ".MuiCardHeader-root"
+          - selector: "cardHeader"
             padding: 16
             background-color: "#eee"
           - selector: "h2"
@@ -87,7 +88,7 @@ tests:
           - selector: "button"
             color: "#3f51b5"
 
-      - selector: header
+      - selector: bar
         width: 1600
         height: 64
         background-color: "#3f51b5"
@@ -106,7 +107,7 @@ tests:
       - selector: "#free"
         height: 332
         width: 343
-      - selector: "#free .MuiCardHeader-root"
+      - selector: "#free cardHeader"
         padding: 16
         background-color: "#eee"
       - selector: "#free h2"
@@ -118,7 +119,7 @@ tests:
       - selector: "#pro"
         height: 356
         width: 343
-      - selector: "#pro .MuiCardHeader-root"
+      - selector: "#pro cardHeader"
         padding: 16
         background-color: "#eee"
       - selector: "#pro h2"
@@ -131,7 +132,7 @@ tests:
       - selector: "#enterprise"
         height: 332
         width: 343
-      - selector: "#enterprise .MuiCardHeader-root"
+      - selector: "#enterprise cardHeader"
         padding: 16
         background-color: "#eee"
       - selector: "#enterprise h2"
@@ -183,7 +184,7 @@ tests:
 
       - selector: "#copyright"
 
-      - selector: header
+      - selector: bar
         width: 375
         height: 64
         background-color: "#3f51b5"
@@ -193,7 +194,7 @@ tests:
     width: 1600
     run: True
     test_cases:
-      - selector: header
+      - selector: bar
         position:
           x: 0
           y: 20
@@ -215,14 +216,14 @@ tests:
     test_cases:
       - selector: main
         contains:
-          - selector: .MuiCard-root
+          - selector: card
             count: 3
       - selector: footer
         position:
           x: 500
           y: 900
         contains:
-          - selector: .MuiGrid-item
+          - selector: gridItem
             count: 4
           - selector: h6
             count: 4
@@ -235,7 +236,7 @@ tests:
     test_cases:
       - selector: main
         contains:
-          - selector: input.MuiInputBase-input
+          - selector: outlinedInput
             count: 2
 
   - name: Test contrast ratio for pricing page

@@ -238,9 +238,3 @@ tests:
         contains:
           - selector: outlinedInput
             count: 2
-
-  - name: Test contrast ratio for pricing page
-    debug: False
-    type: contrast
-    url: /pricing
-    run: False

@@ -43,7 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@mikeyzat12/detest": "file:../detest",
+    "@mikeyzat12/detest": "0.1.0",
     "concurrently": "^6.2.0",
     "wait-on": "^5.3.0"
   }

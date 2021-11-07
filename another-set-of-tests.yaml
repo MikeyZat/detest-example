@@ -8,3 +8,8 @@ tests:
     type: styles
     test_cases:
       - selector: "#random"
+  - name: Test contrast ratio for pricing page
+    debug: False
+    type: contrast
+    url: /pricing
+    run: True
